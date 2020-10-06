@@ -52,6 +52,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\AplicationDBContext.cs" />
+    <Compile Include="Migrations\202010061106135_CreateDepartmentTable.cs" />
+    <Compile Include="Migrations\202010061106135_CreateDepartmentTable.designer.cs">
+      <DependentUpon>202010061106135_CreateDepartmentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,6 +68,11 @@
       <Project>{b7e5285e-b868-4b9b-93a1-28a6db368f50}</Project>
       <Name>EInfo.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202010061106135_CreateDepartmentTable.resx">
+      <DependentUpon>202010061106135_CreateDepartmentTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
